@@ -8,10 +8,13 @@ debug('Start Build Source...');
 
 webpack({
   devtool: false,
-  entry: [
-    'babel-polyfill',
-    path.join(__dirname, 'entry.js'),
-  ],
+  entry: {
+    app: [
+      'babel-polyfill',
+      path.join(__dirname, 'entry.js'),
+    ],
+    vendor: ['react', 'react-dom']
+  },
   output: {
     path: path.join(__dirname, 'build'),
     filename: 'bundle.js',
@@ -25,7 +28,9 @@ webpack({
     }),
     new webpack.optimize.UglifyJsPlugin(),
     new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
+    new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js'),
   ],
   module: {
     loaders: [{

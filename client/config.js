@@ -1,5 +1,6 @@
 export default {
   useReduxLog: true,
+  presist: true,
   mock: {
     use: false,
     responseTimePeriod: 2000,

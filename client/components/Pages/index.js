@@ -1,5 +1,7 @@
-import EmailVerifyPage from './EmailVerifyPage.js';
+import ElementsPage from './ElementsPage.js';
+import HomePage from './HomePage.js';
 
 export {
-  EmailVerifyPage,
+  HomePage,
+  ElementsPage,
 };
