@@ -8,8 +8,11 @@ export default (
   <Route>
     <Route path="/" component={Layouts.Main}>
       <Route path="/homepage" component={Pages.HomePage} />
-      <Route path="/elements" component={Pages.ElementsPage} />
       <IndexRoute component={Pages.HomePage} />
+    </Route>
+    <Route path="/" component={Layouts.NavBackground}>
+      <Route path="/elements" component={Pages.ElementsPage} />
+      <IndexRoute component={Pages.ElementsPage} />
     </Route>
   </Route>
 );

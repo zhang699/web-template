@@ -10,8 +10,8 @@ const styles = {
     margin: '0px 50px 65px 50px',
     backgroundColor: 'rgb(208, 216, 217)',
     padding: '30px',
-    width: '1177px',
-    minHeight: '100%',
+    // width: '1177px',
+    // minHeight: '100%',
   },
   headerBarWrapper: {
     display: 'flex',

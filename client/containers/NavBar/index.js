@@ -11,7 +11,6 @@ class NavBar extends Component {
     super(props);
     this.state = {
       activeLinkList: R.tail(R.split('/', props.path)),
-      memberStatus: props.member.memberStatus,
     };
   }
   componentDidMount() {
@@ -25,22 +24,21 @@ class NavBar extends Component {
     // }
     this.setState({
       activeLinkList,
-      memberStatus: nextProps.member.memberStatus,
     });
   }
 
   render() {
     const {
       activeLinkList,
-      memberStatus,
+      // memberStatus,
     } = this.state;
     return (
-      <div style={{ minHeight: '80vh', width: '160px' }}>
+      <div style={{ minHeight: '80vh' }}>
         {navTreeList.map((item, idx) =>
           (
             (activeLinkList[1] === item.link) ?
-              <NavItem isDisplay key={`nav-item-${idx}`} item={item} disabled={(memberStatus === 'INACTIVE')} />
-            : <NavItem isDisplay={false} key={`nav-item-${idx}`} item={item} disabled={(memberStatus === 'INACTIVE')} />
+              <NavItem isDisplay key={`nav-item-${idx}`} item={item} disabled={(idx % 2 === 0)} />
+            : <NavItem isDisplay={false} key={`nav-item-${idx}`} item={item} disabled={(idx % 2 === 0)} />
           )
         )}
       </div>
@@ -50,16 +48,13 @@ class NavBar extends Component {
 //
 NavBar.propTypes = {
   path: T.string,
-  toPersonalPageAction: T.func,
 };
 
 //
 const mapStateToProps = (state) => ({
   path: state.routing.locationBeforeTransitions.pathname,
-  member: state.Member.Data,
 });
 
 
 export default connect(mapStateToProps, {
-  toPersonalPageAction: toPersonalPage,
 })(radium(NavBar));
