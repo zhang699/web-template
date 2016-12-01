@@ -1,7 +1,7 @@
 import path from 'path';
 import webpack from 'webpack';
 import _debug from 'debug';
-
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 const debug = _debug('Redux-Bolierplate:Build');
 
 debug('Start Build Source...');
@@ -21,6 +21,12 @@ webpack({
     publicPath: '/build/',
   },
   plugins: [
+    new CopyWebpackPlugin([
+      {
+        from:  path.join(__dirname, 'indexbuild.html'),
+        to: path.join( __dirname, 'build/index.html')
+      },
+    ]),
     new webpack.DefinePlugin({
       API_HOST: `"${process.env.API_HOST || '/api'}"`,
       API_VERSION: `"${process.env.API_VERSION || '0.0.0'}"`,

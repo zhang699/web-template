@@ -62,6 +62,7 @@
   "devDependencies": {
     "babel-eslint": "^6.0.4",
     "babel-register": "^6.11.6",
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.25.0",
     "eslint": "^3.11.0",
     "eslint-config-airbnb": "^13.0.0",
