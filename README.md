@@ -41,7 +41,7 @@
 - Selector
 
 ## Container Module
-- NavBar & Header Bar
+- [x] NavBar & Header Bar
 - Pagenator
 
 ### Customize Module

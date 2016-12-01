@@ -14,6 +14,7 @@ const styles = {
   container: {
     display: 'flex',
     width: '100%',
+    minHeight: '100vh',
   }
 };
 
