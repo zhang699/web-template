@@ -8,7 +8,7 @@ const styles = {
     flex: 1,
   },
   mainContainer: {
-    backgroundColor: '#dbe1e2',
+    backgroundColor: '#fff',
     flex: 4,
   },
   container: {
