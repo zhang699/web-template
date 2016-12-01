@@ -20,7 +20,6 @@ const styles = {
 
 
 const NavBarBg = (props) => {
-  // const header = <HeaderBar />;
   return (
     <div style={styles.container}>
       <div style={styles.leftContainer}>
