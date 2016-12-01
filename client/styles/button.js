@@ -7,6 +7,8 @@ export const btn = {
   border: 'none',
   borderRadius: '2px',
   height: '36px',
+  width: '144px',
+  fontSize: '1em',
   lineHeight: '36px',
   padding: '0 2rem',
   position: 'relative',

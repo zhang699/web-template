@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
-import * as Pages from './components/pages/';
+import * as Pages from './components/Pages/';
 import * as Layouts from './components/layouts/';
 
 
