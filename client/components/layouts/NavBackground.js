@@ -10,6 +10,7 @@ const styles = {
   mainContainer: {
     backgroundColor: '#fff',
     flex: 4,
+    
   },
   container: {
     display: 'flex',

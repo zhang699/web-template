@@ -27,12 +27,13 @@ export const btn = {
     backgroundColor: '#2bbbad',
     boxShadow: '0 3px 3px 0 rgba(0,0,0,0.14),0 1px 7px 0 rgba(0,0,0,0.12),0 3px 1px -1px rgba(0,0,0,0.2)',
   }
-}
+};
+
 export const largeBtn = {
   ...btn,
   height: '54px',
   lineHeight: '54px',
-}
+};
 
 export const flatBtn = {
   ...btn,
@@ -44,7 +45,7 @@ export const flatBtn = {
     backgroundColor: 'rgba(0,0,0,0.1)',
     boxShadow: 'none',
   }
-}
+};
 
 export const disabled = {
   pointerEvents: 'none',
@@ -52,4 +53,4 @@ export const disabled = {
   boxShadow: 'none',
   color: '#9F9F9F',
   cursor: 'default'
-}
+};

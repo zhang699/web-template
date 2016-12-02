@@ -6,7 +6,6 @@ import LanguageSwitcher from '../../../containers/LanguageSwitcher';
 
 const styles = {
   bgContainerStyle: {
-
   },
   bgTopStyle: {
     backgroundColor: '#6DB9C7'

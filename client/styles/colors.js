@@ -2,10 +2,12 @@ import Color from 'color';
 
 export const darken = (color, num) => {
   return Color(color).darken(num).rgbString();
-}
+};
+
 export const lighten = (color, num) => {
   return Color(color).lighten(num).rgbString();
-}
+};
+
 export const colors =  {
     red: '#f44336',
     pink: '#e91e63',
@@ -21,4 +23,5 @@ export const colors =  {
     orange: '#ff9800',
     brown: '#795548',
     grey: '#9e9e9e',
-}
+    white: '#fff',
+};
