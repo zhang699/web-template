@@ -8,7 +8,7 @@
  - radio => selected Btn
 
 
-## Color Module
+## Color Module [(color-names)](http://www.colorhexa.com/color-names)
 - conlor variables and ocpacity
 - basic color
 
@@ -30,7 +30,7 @@
 - border width
 
 ## Component Module
-- Background => Layout
+- Layout
 - Card
 - DisplayBox
 - DatePicker ( with or without btn & format)
@@ -39,6 +39,7 @@
 - RichEditor
 - Modal
 - Selector
+- WarningBox
 
 ## Container Module
 - [x] NavBar & Header Bar

@@ -8,9 +8,9 @@ const styles = {
     flex: 1,
   },
   mainContainer: {
-    backgroundColor: '#fff',
+    backgroundColor: '#fcfcfc',
     flex: 4,
-    
+
   },
   container: {
     display: 'flex',
