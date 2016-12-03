@@ -7,6 +7,7 @@ import * as textarea from '../../styles/textarea';
 import * as badge from '../../styles/badge';
 import * as fonts from '../../styles/fonts';
 import Card from '../utils/Cards/';
+import Header from '../utils/Header/';
 import RadioBtn from '../../components/utils/radioButton';
 
 const styles = {
@@ -17,6 +18,7 @@ const styles = {
     boxSizing: 'border-box',
   },
   block: {
+    display: 'flex',
     flex: 1,
     margin: '10px',
     border: '2px #ddd',
@@ -30,23 +32,20 @@ const styles = {
 
 const ElementsPage = (props) => (
   <div style={styles.container}>
-
-    <h1 style={fonts.h1}>ElementsPage</h1>
-    <div style={styles.block}>
-      <Card style={{flexDirection: 'row'}}>
-        <div style={{flex: 1}}>
-          <h1 style={fonts.h1}>This is head in h1</h1>
-          <h2 style={fonts.h2}>This is head in h2</h2>
-          <h3 style={fonts.h3}>This is head in h3</h3>
-          <h4 style={fonts.h4}>This is head in h4</h4>
-          <h5 style={fonts.h5}>This is head in h5</h5>
-          <h6 style={fonts.h6}>This is head in h6</h6>
-        </div>
-        <div style={{flex: 1}}>
-          <p style={fonts.p}>
-            Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis. Nullam id dolor id nibh ultricies vehicula ut id elit.
-          </p>
-        </div>
+    <Header title={"ElementsPage"} content={"Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."} />
+    <div style={{ ...styles.block, flexDirection: 'row' }}>
+      <Card style={{flex: 1}}>
+        <h1 style={fonts.h1}>This is head in h1</h1>
+        <h2 style={fonts.h2}>This is head in h2</h2>
+        <h3 style={fonts.h3}>This is head in h3</h3>
+        <h4 style={fonts.h4}>This is head in h4</h4>
+        <h5 style={fonts.h5}>This is head in h5</h5>
+        <h6 style={fonts.h6}>This is head in h6</h6>
+      </Card>
+      <Card style={{flex: 1}}>
+        <p style={fonts.p}>
+          Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis. Nullam id dolor id nibh ultricies vehicula ut id elit.
+        </p>
       </Card>
     </div>
     <div style={styles.block}>
