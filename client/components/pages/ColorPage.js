@@ -17,9 +17,6 @@ const styles = {
     margin: '10px',
     border: '2px #ddd',
     padding: '20px',
-  },
-  row: {
-    display: 'flex',
   }
 };
 
@@ -80,7 +77,6 @@ const DisplayWrapper = (props) => {
     </div>
   )
 };
-
 const ColorPage = (props) => (
   <div style={styles.container}>
     <Header title={"Color Page"} content={"Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."} />
@@ -114,6 +110,5 @@ const ColorPage = (props) => (
     </div>
   </div>
 );
-
 
 export default radium(ColorPage);

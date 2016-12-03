@@ -1,6 +1,10 @@
 export default [{
-  title: '首頁',
-  link: 'main',
+  title: 'Elements',
+  link: 'elements',
+  childrenNodes: null,
+}, {
+  title: 'Colors',
+  link: 'colors',
   childrenNodes: null,
 }, {
   title: '會員',

@@ -37,8 +37,8 @@ class NavBar extends Component {
         {navTreeList.map((item, idx) =>
           (
             (activeLinkList[1] === item.link) ?
-              <NavItem isDisplay key={`nav-item-${idx}`} item={item} disabled={(idx % 2 === 0)} />
-            : <NavItem isDisplay={false} key={`nav-item-${idx}`} item={item} disabled={(idx % 2 === 0)} />
+              <NavItem isDisplay key={`nav-item-${idx}`} item={item} disabled={(idx === 3)} />
+            : <NavItem isDisplay={false} key={`nav-item-${idx}`} item={item} disabled={(idx === 3)} />
           )
         )}
       </div>
