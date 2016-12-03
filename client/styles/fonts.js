@@ -1,4 +1,4 @@
-import { darkBlack, lighten } from './colors';
+import { darkBlack, lighten, colors } from './colors';
 
 export const fontFamily = {
   fontFamily: "'微軟正黑體', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'",
@@ -64,4 +64,12 @@ export const p = {
   lineHeight: '1.35rem',
   textAlign: 'justify',
   padding: '1rem 0',
+};
+
+export const blockquote = {
+  ...fontFamily,
+  fontWeight: 400,
+  padding: '10px 0 10px 25px',
+  borderLeft: `${colors.blue} solid 4px`,
+  textAlign: 'justify',
 };

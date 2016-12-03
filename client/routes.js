@@ -7,11 +7,11 @@ import * as Layouts from './components/layouts/';
 export default (
   <Route>
     <Route path="/" component={Layouts.Main}>
-      <Route path="/homepage" component={Pages.HomePage} />
-      <IndexRoute component={Pages.HomePage} />
+      <IndexRoute component={Pages.ElementsPage} />
     </Route>
     <Route path="/" component={Layouts.NavBackground}>
       <Route path="/elements" component={Pages.ElementsPage} />
+      <Route path="/colors" component={Pages.ColorPage} />
       <IndexRoute component={Pages.ElementsPage} />
     </Route>
   </Route>

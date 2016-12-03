@@ -32,17 +32,20 @@ const styles = {
 
 const ElementsPage = (props) => (
   <div style={styles.container}>
-    <Header title={"ElementsPage"} content={"Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."} />
+    <Header title={"Elements Page"} content={"Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."} />
     <div style={{ ...styles.block, flexDirection: 'row' }}>
       <Card style={{flex: 1}}>
-        <h1 style={fonts.h1}>This is head in h1</h1>
-        <h2 style={fonts.h2}>This is head in h2</h2>
-        <h3 style={fonts.h3}>This is head in h3</h3>
-        <h4 style={fonts.h4}>This is head in h4</h4>
-        <h5 style={fonts.h5}>This is head in h5</h5>
-        <h6 style={fonts.h6}>This is head in h6</h6>
+        <h1 style={fonts.h1}>Heading h1</h1>
+        <h2 style={fonts.h2}>Heading h2</h2>
+        <h3 style={fonts.h3}>Heading h3</h3>
+        <h4 style={fonts.h4}>Heading h4</h4>
+        <h5 style={fonts.h5}>Heading h5</h5>
+        <h6 style={fonts.h6}>Heading h6</h6>
       </Card>
       <Card style={{flex: 1}}>
+        <blockquote style={fonts.blockquote}>
+          This is an example quotation that uses the blockquote tag.
+        </blockquote>
         <p style={fonts.p}>
           Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis. Nullam id dolor id nibh ultricies vehicula ut id elit.
         </p>

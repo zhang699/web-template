@@ -1,7 +1,7 @@
 import ElementsPage from './ElementsPage.js';
-import HomePage from './HomePage.js';
+import ColorPage from './ColorPage.js';
 
 export {
-  HomePage,
+  ColorPage,
   ElementsPage,
 };
