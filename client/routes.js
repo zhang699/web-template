@@ -11,8 +11,14 @@ export default (
       <IndexRoute component={Pages.ColorPage} />
     </Route>
     <Route path="/" component={Layouts.NavBackground}>
+      <Route path="/css" component={Pages.ElementsPage} />
+      <Route path="/css/colors" component={Pages.ColorPage} />
+
+      <Route path="/component" component={Pages.ElementsPage} />
+      <Route path="/container" component={Pages.ElementsPage} />
+
       <Route path="/elements" component={Pages.ElementsPage} />
-      <Route path="/colors" component={Pages.ColorPage} />
+
       <IndexRoute component={Pages.ElementsPage} />
     </Route>
   </Route>

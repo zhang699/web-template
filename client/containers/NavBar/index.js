@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import radium from 'radium';
 import navTreeList from './NavTreeList';
 import NavItem from './navItem';
+import { colors, lightBlue700 } from '../../styles/colors';
 import R from 'ramda';
 
 
@@ -34,6 +35,13 @@ class NavBar extends Component {
     } = this.state;
     return (
       <div style={{ minHeight: '80vh' }}>
+        <div style={{ padding: '10px', display: 'flex', height: '60px', alignItems: 'center', backgroundColor: lightBlue700, }}>
+          <img style={{
+              position: 'relative',
+              width: '40px',
+            }} src="https://raw.githubusercontent.com/reactjs/redux/master/logo/logo.png" alt=""/>
+          <h3 style={{ position: 'relative', paddingLeft: '10px', color: colors.white }}>Web Template</h3>
+        </div>
         {navTreeList.map((item, idx) =>
           (
             (activeLinkList[1] === item.link) ?
