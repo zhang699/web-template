@@ -92,7 +92,7 @@ class NavItem extends Component {
 
   handleSubItemClick = (item, subItem) => (e) => {
     e.preventDefault();
-    this.props.replace(`/main/${item.link}/${subItem.link}`);
+    this.props.replace(`/${item.link}/${subItem.link}`);
   }
 
   show = (item, isDisplay, activeLinkList) => (

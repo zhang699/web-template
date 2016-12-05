@@ -11,14 +11,14 @@ export default (
       <IndexRoute component={Pages.AboutPage} />
     </Route>
     <Route path="/" component={Layouts.NavBackground}>
-      <Route path="/css" component={Pages.ElementsPage} />
-      <Route path="/css/colors" component={Pages.ColorPage} />
-      <Route path="/css/media" component={Pages.ColorPage} />
-      <Route path="/css/shadow" component={Pages.ColorPage} />
-      <Route path="/css/table" component={Pages.ColorPage} />
-      <Route path="/css/typography" component={Pages.ColorPage} />
-      <Route path="/css/form" component={Pages.ColorPage} />
-      <Route path="/css/Button" component={Pages.ColorPage} />
+      <Route path="css" component={Pages.ElementsPage} />
+      <Route path="css/colors" component={Pages.ColorPage} />
+      <Route path="css/media" component={Pages.ColorPage} />
+      <Route path="css/shadow" component={Pages.ColorPage} />
+      <Route path="css/table" component={Pages.ColorPage} />
+      <Route path="css/typography" component={Pages.ColorPage} />
+      <Route path="css/form" component={Pages.ColorPage} />
+      <Route path="css/Button" component={Pages.ColorPage} />
 
       <Route path="/components" component={Pages.ElementsPage} />
       <Route path="/components/header" component={Pages.ElementsPage} />
