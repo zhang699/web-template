@@ -1,14 +1,14 @@
 import React from 'react';
 import radium from 'radium';
-import { colors, darken, lighten } from '../../styles/colors';
-import * as button from '../../styles/button';
-import * as input from '../../styles/input';
-import * as textarea from '../../styles/textarea';
-import * as badge from '../../styles/badge';
-import * as fonts from '../../styles/fonts';
-import Card from '../utils/Cards/';
-import Header from '../utils/Header/';
-import RadioBtn from '../../components/utils/radioButton';
+import { colors, darken, lighten } from '../../../styles/colors';
+import * as button from '../../../styles/button';
+import * as input from '../../../styles/input';
+import * as textarea from '../../../styles/textarea';
+import * as badge from '../../../styles/badge';
+import * as fonts from '../../../styles/fonts';
+import Card from '../../utils/Cards/';
+import Header from '../../utils/Header/';
+import RadioBtn from '../../../components/utils/radioButton';
 
 const styles = {
   container: {

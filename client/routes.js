@@ -7,8 +7,8 @@ import * as Layouts from './components/layouts/';
 export default (
   <Route>
     <Route path="/" component={Layouts.Main}>
-      <Route path="/about" component={Pages.ColorPage} />
-      <IndexRoute component={Pages.ColorPage} />
+      <Route path="/about" component={Pages.AboutPage} />
+      <IndexRoute component={Pages.AboutPage} />
     </Route>
     <Route path="/" component={Layouts.NavBackground}>
       <Route path="/css" component={Pages.ElementsPage} />

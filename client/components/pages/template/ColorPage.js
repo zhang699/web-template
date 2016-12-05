@@ -1,9 +1,9 @@
 import React from 'react';
 import radium from 'radium';
-import * as colorsSet from '../../styles/colors';
-import Card from '../utils/Cards/';
-import Header from '../utils/Header/';
-import Footer from '../utils/Footer/';
+import * as colorsSet from '../../../styles/colors';
+import Card from '../../utils/Cards/';
+import Header from '../../utils/Header/';
+import Footer from '../../utils/Footer/';
 
 const styles = {
   container: {
