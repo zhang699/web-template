@@ -5,19 +5,99 @@ export default [{
 }, {
   title: 'Components',
   link: 'components',
-  childrenNodes: null,
+  childrenNodes: [{
+      title: 'Header',
+      link: 'header',
+      childrenNodes: null,
+    }, {
+      title: 'Footer',
+      link: 'footer',
+      childrenNodes: null,
+    }, {
+      title: 'Layouts',
+      link: 'layouts',
+      childrenNodes: null,
+    }, {
+      title: 'Cards',
+      link: 'cards',
+      childrenNodes: null,
+    }, {
+      title: 'Displaybox',
+      link: 'displaybox',
+      childrenNodes: null,
+    }, {
+      title: 'Datepicker',
+      link: 'datepicker',
+      childrenNodes: null,
+    }, {
+      title: 'SearchField',
+      link: 'search-field',
+      childrenNodes: null,
+    }, {
+      title: 'EditableField',
+      link: 'editable-field',
+      childrenNodes: null,
+    }, {
+      title: 'Selector',
+      link: 'selector',
+      childrenNodes: null,
+    }, {
+      title: 'WarningBox',
+      link: 'warning-box',
+      childrenNodes: null,
+    }, {
+      title: 'Modal',
+      link: 'modal',
+      childrenNodes: null,
+    }],
 }, {
   title: 'CSS',
   link: 'css',
   childrenNodes: [{
-    title: 'Colors',
+    title: 'Color',
     link: 'colors',
+    childrenNodes: null,
+  }, {
+    title: 'Media',
+    link: 'media',
+    childrenNodes: null,
+  }, {
+    title: 'Shadow',
+    link: 'shadow',
+    childrenNodes: null,
+  }, {
+    title: 'Table',
+    link: 'table',
+    childrenNodes: null,
+  }, {
+    title: 'Typography',
+    link: 'typography',
+    childrenNodes: null,
+  }, {
+    title: 'Form',
+    link: 'form',
+    childrenNodes: null,
+  }, {
+    title: 'Button',
+    link: 'button',
     childrenNodes: null,
   }],
 }, {
-  title: 'Javascript',
-  link: 'Javascript',
-  childrenNodes: null,
+  title: 'containers',
+  link: 'containers',
+  childrenNodes: [{
+    title: 'Navbar',
+    link: 'navbar',
+    childrenNodes: null,
+  }, {
+    title: 'i18n',
+    link: 'i18n',
+    childrenNodes: null,
+  }, {
+    title: 'API Indicator',
+    link: 'api-indicator',
+    childrenNodes: null,
+  }],
 }, {
   title: 'Showcase',
   link: 'showcase',
