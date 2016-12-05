@@ -13,25 +13,25 @@ export default (
     <Route path="/" component={Layouts.NavBackground}>
       <Route path="css" component={Pages.ElementsPage} />
       <Route path="css/colors" component={Pages.ColorPage} />
-      <Route path="css/media" component={Pages.ColorPage} />
-      <Route path="css/shadow" component={Pages.ColorPage} />
-      <Route path="css/table" component={Pages.ColorPage} />
-      <Route path="css/typography" component={Pages.ColorPage} />
-      <Route path="css/form" component={Pages.ColorPage} />
-      <Route path="css/Button" component={Pages.ColorPage} />
+      <Route path="css/media" component={Pages.MediaPage} />
+      <Route path="css/shadow" component={Pages.ShadowPage} />
+      <Route path="css/typography" component={Pages.TypographyPage} />
+      <Route path="css/table" component={Pages.ElementsPage} />
+      <Route path="css/form" component={Pages.ElementsPage} />
+      <Route path="css/button" component={Pages.ElementsPage} />
 
-      <Route path="/components" component={Pages.ElementsPage} />
-      <Route path="/components/header" component={Pages.ElementsPage} />
-      <Route path="/components/footer" component={Pages.ElementsPage} />
-      <Route path="/components/layouts" component={Pages.ElementsPage} />
-      <Route path="/components/cards" component={Pages.ElementsPage} />
-      <Route path="/components/displaybox" component={Pages.ElementsPage} />
-      <Route path="/components/datepicker" component={Pages.ElementsPage} />
-      <Route path="/components/search-field" component={Pages.ElementsPage} />
-      <Route path="/components/editable-field" component={Pages.ElementsPage} />
-      <Route path="/components/selector" component={Pages.ElementsPage} />
-      <Route path="/components/warning-box" component={Pages.ElementsPage} />
-      <Route path="/components/modal" component={Pages.ElementsPage} />
+      <Route path="/components" component={Pages.ComponentPage} />
+      <Route path="/components/header" component={Pages.ComponentPage} />
+      <Route path="/components/footer" component={Pages.ComponentPage} />
+      <Route path="/components/layouts" component={Pages.ComponentPage} />
+      <Route path="/components/cards" component={Pages.ComponentPage} />
+      <Route path="/components/displaybox" component={Pages.ComponentPage} />
+      <Route path="/components/datepicker" component={Pages.ComponentPage} />
+      <Route path="/components/search-field" component={Pages.ComponentPage} />
+      <Route path="/components/editable-field" component={Pages.ComponentPage} />
+      <Route path="/components/selector" component={Pages.ComponentPage} />
+      <Route path="/components/warning-box" component={Pages.ComponentPage} />
+      <Route path="/components/modal" component={Pages.ComponentPage} />
 
 
       <Route path="/containers" component={Pages.ElementsPage} />

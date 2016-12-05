@@ -16,10 +16,9 @@ const styles = {
 
 const Footer = (props) =>(
   <div style={{...styles.wrapper, ...props.style}}>
-    {/* <h2 style={{ ...fonts.h2, color: colors.white }}>{props.title}</h2> */}
-    {/* <h6 style={{ ...fonts.h6, color: colors.white }}>{props.content}</h6> */}
-    <p style={{ ...fonts.p, color: colors.white }}>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est at lobortis.</p>
-    <p style={{ ...fonts.p, color: colors.white }}>Copyright © 2016 by William Wang</p>
+    <h6 style={{ ...fonts.h6, color: colors.white }}>{props.title || 'Ipsum Pharetra Malesuada'}</h6>
+    <p style={{ ...fonts.p, color: colors.white }}>{ props.content || 'Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam quis risus eget urna mollis ornare vel eu leo. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est at lobortis.'}</p>
+    <p style={{ ...fonts.p, color: colors.white, textAlign: 'right' }}> { props.copyright || 'Copyright © 2016 by William Wang'}</p>
   </div>
 );
 
@@ -27,6 +26,7 @@ const Footer = (props) =>(
 Footer.propTypes = {
   title: T.string,
   content: T.string,
+  copyright: T.string,
 };
 
 export default radium(Footer);

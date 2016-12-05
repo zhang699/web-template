@@ -66,12 +66,12 @@ export default [{
     link: 'shadow',
     childrenNodes: null,
   }, {
-    title: 'Table',
-    link: 'table',
-    childrenNodes: null,
-  }, {
     title: 'Typography',
     link: 'typography',
+    childrenNodes: null,
+  }, {
+    title: 'Table',
+    link: 'table',
     childrenNodes: null,
   }, {
     title: 'Form',

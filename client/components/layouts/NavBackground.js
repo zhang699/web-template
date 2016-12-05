@@ -6,10 +6,12 @@ const styles = {
   leftContainer: {
     backgroundColor: '#fff',
     flex: 1,
+    position: 'relative'
   },
   mainContainer: {
     backgroundColor: '#fcfcfc',
     flex: 4,
+    position: 'relative'
 
   },
   container: {
