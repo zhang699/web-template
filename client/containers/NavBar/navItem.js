@@ -4,6 +4,7 @@ import { replace } from 'react-router-redux';
 import radium from 'radium';
 import R from 'ramda';
 import * as fonts from '../../styles/fonts';
+import * as shadows from '../../styles/shadow';
 import { lightBlue400, lightBlue600, blueGrey100, blueGrey300, blueGrey600, blue500, blue300 } from '../../styles/colors';
 
 const styles = {
@@ -24,15 +25,18 @@ const styles = {
     ':hover': {
       backgroundColor: lightBlue400,
       color: '#fff',
+      ...shadows.shadowC
     },
     ':active': {
       backgroundColor: lightBlue600,
       color: '#fff',
+      ...shadows.shadowC
     }
   },
   activeItemWrapper: {
     backgroundColor: lightBlue600,
     color: '#fff',
+    ...shadows.shadowC,
   },
   disabledItemWrapper: {
     color: blueGrey100,

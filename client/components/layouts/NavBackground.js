@@ -14,8 +14,7 @@ const styles = {
     flex: 4,
     position: 'absolute',
     top: 0,
-    left: '15%',
-    width: '85%',
+    left: '240px',
     overflow: 'hidden',
     '@media all and (max-width: 750px)': {
       left: '0vw',

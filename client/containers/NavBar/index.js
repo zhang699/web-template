@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import radium from 'radium';
 import navTreeList from './NavTreeList';
 import NavItem from './navItem';
-import { colors, lightBlue400, lightBlue600, fullWhite } from '../../styles/colors';
+import { colors, lightBlue400, fullWhite } from '../../styles/colors';
 import * as shoadows from '../../styles/shadow';
 import { logo } from '../../assets/images/';
 import * as buttons from '../../styles/button';
@@ -16,7 +16,7 @@ const styles = {
     height: '100vh',
     position: 'fixed',
     overflow: 'auto',
-    width: '15%',
+    minWidth: '240px',
     top: 0,
     left: 0,
     '@media all and (max-width: 750px)': {
@@ -51,7 +51,14 @@ const styles = {
       display: 'block',
     }
   },
-  navBarHeader: { padding: '10px', display: 'flex', height: '60px', alignItems: 'center', backgroundColor: lightBlue600, }
+  navBarHeader: {
+    padding: '10px',
+    display: 'flex',
+    height: '60px',
+    alignItems: 'center',
+    backgroundColor: lightBlue400,
+    ...shoadows.shadowB,
+  }
 };
 
 class NavBar extends Component {
