@@ -2,15 +2,15 @@ import React, { PropTypes as T } from 'react';
 import radium from 'radium';
 import { StyleRoot } from 'radium';
 import NavBar from '../../containers/NavBar/';
-
+import { fullWhite, blueGrey50 } from '../../styles/colors';
 const styles = {
   leftContainer: {
-    backgroundColor: '#fff',
+    backgroundColor: fullWhite,
     flex: 1,
     position: 'relative'
   },
   mainContainer: {
-    backgroundColor: '#fcfcfc',
+    backgroundColor: blueGrey50,
     flex: 4,
     position: 'absolute',
     top: 0,

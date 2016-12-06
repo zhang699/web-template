@@ -3,11 +3,15 @@ import { connect } from 'react-redux';
 import radium from 'radium';
 import navTreeList from './NavTreeList';
 import NavItem from './navItem';
-import { colors, lightBlue700 } from '../../styles/colors';
+import { colors, lightBlue400, lightBlue600, fullWhite } from '../../styles/colors';
+import * as shoadows from '../../styles/shadow';
 import { logo } from '../../assets/images/';
+import * as buttons from '../../styles/button';
+
 import R from 'ramda';
 const styles = {
   navWrapper: {
+    ...shoadows.shadowC,
     zIndex: 100,
     height: '100vh',
     position: 'fixed',
@@ -18,7 +22,7 @@ const styles = {
     '@media all and (max-width: 750px)': {
       display: 'fixed',
       position: 'fixed',
-      backgroundColor: 'rgba(244, 244, 244, 0.8)',
+      backgroundColor: fullWhite,
       height: 'auto',
       width: '100vw',
       top: 0,
@@ -28,6 +32,8 @@ const styles = {
   displayBtn: {
     display: 'none',
     '@media all and (max-width: 750px)': {
+      ...buttons.flatBtn,
+      color: fullWhite,
       display: 'block',
       position: 'absolute',
       right: '20px',
@@ -44,7 +50,8 @@ const styles = {
     '@media all and (max-width: 750px)': {
       display: 'block',
     }
-  }
+  },
+  navBarHeader: { padding: '10px', display: 'flex', height: '60px', alignItems: 'center', backgroundColor: lightBlue600, }
 };
 
 class NavBar extends Component {
@@ -81,13 +88,12 @@ class NavBar extends Component {
     } = this.state;
     return (
       <div style={styles.navWrapper}>
-        <div style={{ padding: '10px', display: 'flex', height: '60px', alignItems: 'center', backgroundColor: lightBlue700, }}>
-          <img style={{
-              position: 'relative',
-              width: '40px',
-            }} src={logo} alt=""/>
+        <div style={styles.navBarHeader}>
+          <img style={{ position: 'relative', width: '40px' }} src={logo} alt=""/>
           <h3 style={{ position: 'relative', padding: '0 10px 0 10px', color: colors.white }}>Web Template</h3>
-          <button style={styles.displayBtn} onClick={ this.toggle }><i className="fa fa-fw fa-bars fa-lg"></i></button>
+          <button style={styles.displayBtn} onClick={ this.toggle }>
+            <i className="fa fa-fw fa-bars fa-lg"></i>
+          </button>
         </div>
         <div style={styles.aboveBar}>
           {

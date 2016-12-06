@@ -9,7 +9,6 @@ const styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
-    // padding: '15px',
     boxSizing: 'border-box',
   },
   block: {

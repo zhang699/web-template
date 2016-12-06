@@ -1,6 +1,6 @@
 import React, { PropTypes as T } from 'react';
 import radium from 'radium';
-import { colors, lightBlue700 } from '../../../styles/colors';
+import { colors, lightBlue400 } from '../../../styles/colors';
 import * as fonts from '../../../styles/fonts';
 const styles = {
   wrapper: {
@@ -9,7 +9,7 @@ const styles = {
     width: '100%',
     boxSizing: 'border-box',
     padding: '15px',
-    backgroundColor: lightBlue700,
+    backgroundColor: lightBlue400,
   }
 };
 

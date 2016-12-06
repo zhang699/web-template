@@ -3,66 +3,69 @@ import { connect } from 'react-redux';
 import { replace } from 'react-router-redux';
 import radium from 'radium';
 import R from 'ramda';
+import * as fonts from '../../styles/fonts';
+import { lightBlue400, lightBlue600, blueGrey100, blueGrey300, blueGrey600, blue500, blue300 } from '../../styles/colors';
 
 const styles = {
   itemWrapper: {
+    ...fonts.p,
     boxSizing: 'border-box',
     position: 'relative',
     width: '100%',
     minHeight: '30px',
     padding: '10px 40px',
-    fontSize: '15px',
     lineHeight: '30px',
-    color: '#1f4b54',
+    color: blueGrey600,
     cursor: 'pointer',
     WebkitUserSelect: 'none',
     MozUserSelect: 'none',
     MsUserSelect: 'none',
     userSelect: 'none',
     ':hover': {
-      backgroundColor: 'rgba(229, 105, 73, 0.5)',
+      backgroundColor: lightBlue400,
       color: '#fff',
     },
     ':active': {
-      backgroundColor: 'rgba(229, 105, 73, 1)',
+      backgroundColor: lightBlue600,
       color: '#fff',
     }
   },
   activeItemWrapper: {
-    backgroundColor: 'rgba(229, 105, 73, 1)',
+    backgroundColor: lightBlue600,
     color: '#fff',
   },
   disabledItemWrapper: {
-    color: 'rgba(150, 150, 150, 0.6)',
+    color: blueGrey100,
     cursor: 'not-allowed',
   },
   subItemWrapper: {
+    ...fonts.p,
+    fontSize: '14px',
     position: 'relative',
     height: '18px',
     cursor: 'pointer',
-    color: 'rgb(109, 185, 199)',
+    color: blueGrey300,
     padding: '5px 40px',
     lineHeight: '18px',
-    fontSize: '10px',
     WebkitUserSelect: 'none',
     MozUserSelect: 'none',
     MsUserSelect: 'none',
     userSelect: 'none',
     ':hover': {
-      color: 'rgba(229, 105, 73, 0.5)',
-      borderLeft: '4px solid rgba(229, 105, 73, 0.5)',
+      color: blue500,
+      borderLeft: `4px solid ${blue500}`,
     },
     ':active': {
-      color: 'rgba(229, 105, 73, 1)',
-      borderLeft: '4px solid rgba(229, 105, 73, 1)',
+      color: blue300,
+      borderLeft: `4px solid ${blue300}`,
     }
   },
   activeSubItemWrapper: {
-    color: 'rgba(229, 105, 73, 1)',
-    borderLeft: '4px solid rgba(229, 105, 73, 1)',
+    color: blue300,
+    borderLeft: `4px solid ${blue300}`,
   },
-
 };
+
 class NavItem extends Component {
   constructor(props) {
     super(props);
