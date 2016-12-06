@@ -13,7 +13,6 @@ const styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
-    padding: '15px',
     boxSizing: 'border-box',
   }
 
@@ -22,17 +21,17 @@ const styles = {
 const ComponentPage = (props) => (
   <div style={styles.container}>
     <Header title={"Component"} content={"Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."} />
-    <Card style={{ margin: '10px 0'}}>
+    <Card style={{ margin: '10px 0', boxSizing: 'border-box'}}>
       <h5 style={fonts.h5}>Header</h5>
       <p style={fonts.p}> Usaege props : title (string), content (string), style (obj)</p>
       <Header title={"TITLE"} content={"Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."} />
     </Card>
-    <Card style={{ margin: '10px 0'}}>
+    <Card style={{ margin: '10px 0', boxSizing: 'border-box'}}>
       <h5 style={fonts.h5}>Footer</h5>
       <p style={fonts.p}> Usaege props : title (string), content (string), copyright (string), style(obj)</p>
       <Footer />
     </Card>
-    <Card style={{ margin: '10px 0'}}>
+    <Card style={{ margin: '10px 0', boxSizing: 'border-box'}}>
       <h5 style={fonts.h5}>Card</h5>
       <p style={fonts.p}> Usaege props : style (obj)</p>
       <div style={{ width : '90%' }}>
@@ -45,35 +44,35 @@ const ComponentPage = (props) => (
         </Card>
       </div>
     </Card>
-    <Card style={{ margin: '10px 0'}}>
+    <Card style={{ margin: '10px 0', boxSizing: 'border-box'}}>
       <h5 style={fonts.h5}>DisplayBox</h5>
       <p style={fonts.p}> Usaege props : style (obj)</p>
       <DisplayBox></DisplayBox>
     </Card>
-    <Card style={{ margin: '10px 0'}}>
+    <Card style={{ margin: '10px 0', boxSizing: 'border-box'}}>
       <h5 style={fonts.h5}>DatePicker</h5>
       TODO
       <p style={fonts.p}> Usaege props : style (obj)</p>
       <DatePicker />
     </Card>
 
-    <Card style={{ margin: '10px 0'}}>
+    <Card style={{ margin: '10px 0', boxSizing: 'border-box'}}>
       <h5 style={fonts.h5}>Search Field</h5>
       TODO
     </Card>
-    <Card style={{ margin: '10px 0'}}>
+    <Card style={{ margin: '10px 0', boxSizing: 'border-box'}}>
       <h5 style={fonts.h5}>Editable Field</h5>
       TODO
     </Card>
-    <Card style={{ margin: '10px 0'}}>
+    <Card style={{ margin: '10px 0', boxSizing: 'border-box'}}>
       <h5 style={fonts.h5}>Selector</h5>
       TODO
     </Card>
-    <Card style={{ margin: '10px 0'}}>
+    <Card style={{ margin: '10px 0', boxSizing: 'border-box'}}>
       <h5 style={fonts.h5}>Warning Box</h5>
       TODO
     </Card>
-    <Card style={{ margin: '10px 0'}}>
+    <Card style={{ margin: '10px 0', boxSizing: 'border-box'}}>
       <h5 style={fonts.h5}>Modal</h5>
       <a href="http://madscript.com/boron/">Boron</a>
     </Card>

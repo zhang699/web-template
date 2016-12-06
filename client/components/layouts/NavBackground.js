@@ -1,5 +1,6 @@
 import React, { PropTypes as T } from 'react';
 import radium from 'radium';
+import { StyleRoot } from 'radium';
 import NavBar from '../../containers/NavBar/';
 
 const styles = {
@@ -11,8 +12,16 @@ const styles = {
   mainContainer: {
     backgroundColor: '#fcfcfc',
     flex: 4,
-    position: 'relative'
-
+    position: 'absolute',
+    top: 0,
+    left: '15%',
+    width: '85%',
+    overflow: 'hidden',
+    '@media all and (max-width: 750px)': {
+      left: '0vw',
+      top: '80px',
+      width: '100vw',
+    }
   },
   container: {
     display: 'flex',
@@ -25,12 +34,12 @@ const styles = {
 const NavBarBg = (props) => {
   return (
     <div style={styles.container}>
-      <div style={styles.leftContainer}>
+      <StyleRoot>
         <NavBar />
-      </div>
-      <div style={styles.mainContainer}>
-        {props.children}
-      </div>
+        <div style={styles.mainContainer}>
+          {props.children}
+        </div>
+      </StyleRoot>
     </div>
   );
 };

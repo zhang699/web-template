@@ -20,26 +20,26 @@ export default (
       <Route path="css/form" component={Pages.ElementsPage} />
       <Route path="css/button" component={Pages.ElementsPage} />
 
-      <Route path="/components" component={Pages.ComponentPage} />
-      <Route path="/components/header" component={Pages.ComponentPage} />
-      <Route path="/components/footer" component={Pages.ComponentPage} />
-      <Route path="/components/layouts" component={Pages.ComponentPage} />
-      <Route path="/components/cards" component={Pages.ComponentPage} />
-      <Route path="/components/displaybox" component={Pages.ComponentPage} />
-      <Route path="/components/datepicker" component={Pages.ComponentPage} />
-      <Route path="/components/search-field" component={Pages.ComponentPage} />
-      <Route path="/components/editable-field" component={Pages.ComponentPage} />
-      <Route path="/components/selector" component={Pages.ComponentPage} />
-      <Route path="/components/warning-box" component={Pages.ComponentPage} />
-      <Route path="/components/modal" component={Pages.ComponentPage} />
+      <Route path="components" component={Pages.ComponentPage} />
+      <Route path="components/header" component={Pages.ComponentPage} />
+      <Route path="components/footer" component={Pages.ComponentPage} />
+      <Route path="components/layouts" component={Pages.ComponentPage} />
+      <Route path="components/cards" component={Pages.ComponentPage} />
+      <Route path="components/displaybox" component={Pages.ComponentPage} />
+      <Route path="components/datepicker" component={Pages.ComponentPage} />
+      <Route path="components/search-field" component={Pages.ComponentPage} />
+      <Route path="components/editable-field" component={Pages.ComponentPage} />
+      <Route path="components/selector" component={Pages.ComponentPage} />
+      <Route path="components/warning-box" component={Pages.ComponentPage} />
+      <Route path="components/modal" component={Pages.ComponentPage} />
 
 
-      <Route path="/containers" component={Pages.ElementsPage} />
-      <Route path="/containers/navbar" component={Pages.ElementsPage} />
-      <Route path="/containers/i18n" component={Pages.ElementsPage} />
-      <Route path="/containers/api-indicator" component={Pages.ElementsPage} />
+      <Route path="containers" component={Pages.ElementsPage} />
+      <Route path="containers/navbar" component={Pages.ElementsPage} />
+      <Route path="containers/i18n" component={Pages.ElementsPage} />
+      <Route path="containers/api-indicator" component={Pages.ElementsPage} />
 
-      <Route path="/showcase" component={Pages.ElementsPage} />
+      <Route path="showcase" component={Pages.ElementsPage} />
 
       <IndexRoute component={Pages.ColorPage} />
     </Route>

@@ -13,16 +13,15 @@ import RadioBtn from '../../../components/utils/radioButton';
 const styles = {
   container: {
     display: 'flex',
+    flexWrap: 'wrap',
     flexDirection: 'column',
-    padding: '15px',
     boxSizing: 'border-box',
   },
   block: {
     display: 'flex',
+    flexWrap: 'wrap',
     flex: 1,
-    margin: '10px',
     border: '2px #ddd',
-    padding: '20px',
   },
   row: {
     display: 'flex',
