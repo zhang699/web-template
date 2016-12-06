@@ -9,7 +9,7 @@ const styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
-    padding: '15px',
+    // padding: '15px',
     boxSizing: 'border-box',
   },
   block: {
@@ -50,8 +50,8 @@ const DisplayWrapper = (props) => {
           display: 'flex',
           flex: 1,
           boxSizing: 'border-box',
-          margin: '40px 10px',
-          minWidth: '300px',
+          margin: '20px 5px',
+          minWidth: '220px',
         }}>
         {
           ['50', '100', '200', '300', '400', '500', '600', '700', '800', '900', 'A100', 'A200', 'A400', 'A700'].map(
@@ -68,7 +68,7 @@ const DisplayWrapper = (props) => {
         flex: 1,
         boxSizing: 'border-box',
         margin: '40px 10px',
-        minWidth: '300px',
+        minWidth: '220px',
       }}>
       {
         ['transparent', 'fullWhite', 'darkWhite', 'lightWhite', 'faintBlack', 'minBlack', 'lightBlack', 'darkBlack', 'fullBlack'].map(

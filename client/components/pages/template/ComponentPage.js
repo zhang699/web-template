@@ -15,7 +15,6 @@ const styles = {
     flexDirection: 'column',
     boxSizing: 'border-box',
   }
-
 };
 
 const ComponentPage = (props) => (
