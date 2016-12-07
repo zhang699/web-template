@@ -16,7 +16,8 @@ const styles = {
     height: '100vh',
     position: 'fixed',
     overflow: 'auto',
-    minWidth: '240px',
+    width: '240px',
+    backgroundColor: fullWhite,
     top: 0,
     left: 0,
     '@media all and (max-width: 750px)': {

@@ -12,11 +12,15 @@ const styles = {
   mainContainer: {
     backgroundColor: blueGrey50,
     flex: 4,
-    position: 'absolute',
+    position: 'fixed',
+    height: '100vh',
+    overflow: 'auto',
     top: 0,
-    left: '240px',
-    overflow: 'hidden',
+    left: 0,
+    right: 0,
+    paddingLeft: '240px',
     '@media all and (max-width: 750px)': {
+      paddingLeft: '0px',
       left: '0vw',
       top: '80px',
       width: '100vw',

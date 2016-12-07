@@ -11,7 +11,6 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     boxSizing: 'border-box',
-    minHeight: '100vh'
   },
   block: {
     display: 'flex',
