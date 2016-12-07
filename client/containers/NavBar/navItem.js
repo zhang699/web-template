@@ -5,7 +5,7 @@ import radium from 'radium';
 import R from 'ramda';
 import * as fonts from '../../styles/fonts';
 import * as shadows from '../../styles/shadow';
-import { lightBlue400, lightBlue600, blueGrey100, blueGrey300, blueGrey600, blue500, blue300 } from '../../styles/colors';
+import { lightBlue50, lightBlue300, lightBlue400, lightBlue600, blueGrey100, blueGrey300, blueGrey400 } from '../../styles/colors';
 
 const styles = {
   itemWrapper: {
@@ -16,7 +16,8 @@ const styles = {
     minHeight: '30px',
     padding: '10px 40px',
     lineHeight: '30px',
-    color: blueGrey600,
+    color: blueGrey400,
+    fontWeight: 320,
     cursor: 'pointer',
     WebkitUserSelect: 'none',
     MozUserSelect: 'none',
@@ -28,13 +29,13 @@ const styles = {
       ...shadows.shadowC
     },
     ':active': {
-      backgroundColor: lightBlue600,
+      backgroundColor: lightBlue300,
       color: '#fff',
-      ...shadows.shadowC
+      ...shadows.shadowA
     }
   },
   activeItemWrapper: {
-    backgroundColor: lightBlue600,
+    backgroundColor: lightBlue300,
     color: '#fff',
     ...shadows.shadowC,
   },
@@ -56,17 +57,18 @@ const styles = {
     MsUserSelect: 'none',
     userSelect: 'none',
     ':hover': {
-      color: blue500,
-      borderLeft: `4px solid ${blue500}`,
+      color: lightBlue600,
+      borderLeft: `4px solid ${lightBlue600}`,
     },
     ':active': {
-      color: blue300,
-      borderLeft: `4px solid ${blue300}`,
+      color: lightBlue300,
+      borderLeft: `4px solid ${lightBlue300}`,
     }
   },
   activeSubItemWrapper: {
-    color: blue300,
-    borderLeft: `4px solid ${blue300}`,
+    color: lightBlue300,
+    backgroundColor: lightBlue50,
+    borderLeft: `4px solid ${lightBlue300}`,
   },
 };
 
@@ -107,8 +109,8 @@ class NavItem extends Component {
       <div
         style={
           (
-            item.link === activeLinkList[1] ||
-            (item.link === 'main' && item.link === activeLinkList[0] && activeLinkList[1] === '')
+            item.link === activeLinkList[0] ||
+            (item.link === activeLinkList[0] && activeLinkList[1] === '')
           ) ?
           { ...styles.itemWrapper, ...styles.activeItemWrapper } : styles.itemWrapper}
         onClick={this.handleMainItemClick(item)}>
@@ -120,7 +122,7 @@ class NavItem extends Component {
             item.childrenNodes.map((subItem, idx) =>
               <div
                 style={
-                  (item.link === activeLinkList[1] && subItem.link === activeLinkList[2]) ?
+                  (item.link === activeLinkList[0] && subItem.link === activeLinkList[1]) ?
                   { ...styles.subItemWrapper, ...styles.activeSubItemWrapper } : styles.subItemWrapper
                 }
                 key={`nav-sub-item-${idx}`}

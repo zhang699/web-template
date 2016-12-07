@@ -15,6 +15,7 @@ const styles = {
   block: {
     display: 'flex',
     flex: 1,
+    minHeight: '50vh',
     margin: '10px',
     border: '2px #ddd',
     padding: '20px',
@@ -67,7 +68,7 @@ const ShadowPage = (props) => (
         </div>
       </Card>
     </div>
-
+    <Footer />
   </div>
 );
 

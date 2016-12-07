@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 import radium from 'radium';
 import navTreeList from './NavTreeList';
 import NavItem from './navItem';
+import R from 'ramda';
 import { colors, lightBlue400, fullWhite } from '../../styles/colors';
 import * as shoadows from '../../styles/shadow';
-import { logo } from '../../assets/images/';
 import * as buttons from '../../styles/button';
+import { logo } from '../../assets/images/';
 
-import R from 'ramda';
 const styles = {
   navWrapper: {
     ...shoadows.shadowC,
@@ -37,7 +37,7 @@ const styles = {
       color: fullWhite,
       display: 'block',
       position: 'absolute',
-      right: '20px',
+      right: '0px',
     }
   },
   leftBar: {
@@ -94,6 +94,7 @@ class NavBar extends Component {
     const {
       activeLinkList,
     } = this.state;
+
     return (
       <div style={styles.navWrapper}>
         <div style={styles.navBarHeader}>
@@ -107,7 +108,7 @@ class NavBar extends Component {
           {
             (this.state.display) ? navTreeList.map((item, idx) =>
               (
-                (activeLinkList[1] === item.link) ?
+                (activeLinkList[0] === item.link) ?
                   <NavItem isDisplay key={`nav-item-${idx}`} item={item} disabled={(idx === 20)} />
                 : <NavItem isDisplay={false} key={`nav-item-${idx}`} item={item} disabled={(idx === 20)} />
               )
@@ -118,7 +119,7 @@ class NavBar extends Component {
           {
             navTreeList.map((item, idx) =>
               (
-                (activeLinkList[1] === item.link) ?
+                (activeLinkList[0] === item.link) ?
                   <NavItem isDisplay key={`nav-item-${idx}`} item={item} disabled={(idx === 20)} />
                 : <NavItem isDisplay={false} key={`nav-item-${idx}`} item={item} disabled={(idx === 20)} />
               )
