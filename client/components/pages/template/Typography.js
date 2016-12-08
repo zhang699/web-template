@@ -8,13 +8,13 @@ import * as badge from '../../../styles/badge';
 import * as fonts from '../../../styles/fonts';
 import Card from '../../utils/Cards/';
 import Header from '../../utils/Header/';
+import Footer from '../../utils/Footer/';
 import RadioBtn from '../../../components/utils/radioButton';
 
 const styles = {
   container: {
     display: 'flex',
     flexDirection: 'column',
-    padding: '15px',
     boxSizing: 'border-box',
   },
   block: {
@@ -32,8 +32,8 @@ const styles = {
 const TypographyPage = (props) => (
   <div style={styles.container}>
     <Header title={"Typography"} content={"Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."} />
-    <div style={{ ...styles.block, flexDirection: 'row' }}>
-      <Card style={{flex: 1}}>
+    <div style={{ ...styles.block, flexDirection: 'row', flexWrap: 'wrap' }}>
+      <Card style={{flex: 1, alignItems: 'center' }}>
         <h1 style={fonts.h1}>Heading h1</h1>
         <h2 style={fonts.h2}>Heading h2</h2>
         <h3 style={fonts.h3}>Heading h3</h3>
@@ -41,8 +41,16 @@ const TypographyPage = (props) => (
         <h5 style={fonts.h5}>Heading h5</h5>
         <h6 style={fonts.h6}>Heading h6</h6>
       </Card>
-      <Card style={{flex: 1}}>
-        TODO Bold thin weight
+      <Card style={{flex: 1, alignItems: 'center' }}>
+        <span style={{ ...fonts.p, fontWeight: '100' }}>Weight 100 &nbsp;<i>Weight 100</i>&nbsp; <u>Weight 100</u> </span>
+        <span style={{ ...fonts.p, fontWeight: '200' }}>Weight 200 &nbsp;<i>Weight 200</i>&nbsp; <u>Weight 200</u> </span>
+        <span style={{ ...fonts.p, fontWeight: '300' }}>Weight 300 &nbsp;<i>Weight 300</i>&nbsp; <u>Weight 300</u> </span>
+        <span style={{ ...fonts.p, fontWeight: '400' }}>Weight 400 &nbsp;<i>Weight 400</i>&nbsp; <u>Weight 400</u> </span>
+        <span style={{ ...fonts.p, fontWeight: '500' }}>Weight 500 &nbsp;<i>Weight 500</i>&nbsp; <u>Weight 500</u> </span>
+        <span style={{ ...fonts.p, fontWeight: '600' }}>Weight 600 &nbsp;<i>Weight 600</i>&nbsp; <u>Weight 600</u> </span>
+        <span style={{ ...fonts.p, fontWeight: '700' }}>Weight 700 &nbsp;<i>Weight 700</i>&nbsp; <u>Weight 700</u> </span>
+        <span style={{ ...fonts.p, fontWeight: '800' }}>Weight 800 &nbsp;<i>Weight 800</i>&nbsp; <u>Weight 800</u> </span>
+        <span style={{ ...fonts.p, fontWeight: '900' }}>Weight 900 &nbsp;<i>Weight 900</i>&nbsp; <u>Weight 900</u> </span>
       </Card>
     </div>
     <div style={{ ...styles.block }}>
@@ -61,7 +69,7 @@ const TypographyPage = (props) => (
         </p>
       </Card>
     </div>
-
+    <Footer></Footer>
   </div>
 );
 
