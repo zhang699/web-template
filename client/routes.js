@@ -16,9 +16,9 @@ export default (
       <Route path="css/media" component={Pages.MediaPage} />
       <Route path="css/shadow" component={Pages.ShadowPage} />
       <Route path="css/typography" component={Pages.TypographyPage} />
-      <Route path="css/table" component={Pages.ElementsPage} />
-      <Route path="css/form" component={Pages.ElementsPage} />
-      <Route path="css/button" component={Pages.ElementsPage} />
+      <Route path="css/table" component={Pages.TablePage} />
+      <Route path="css/form" component={Pages.FormPage} />
+      <Route path="css/button" component={Pages.ButtonPage} />
 
       <Route path="components" component={Pages.ComponentPage} />
       <Route path="components/header" component={Pages.ComponentPage} />

@@ -6,6 +6,8 @@ import TypographyPage from './template/Typography.js';
 import MediaPage from './template/MediaPage.js';
 import ShadowPage from './template/ShadowPage.js';
 import FormPage from './template/FormPage.js';
+import TablePage from './template/TablePage';
+import ButtonPage from './template/ButtonPage.js';
 
 export {
   AboutPage,
@@ -14,5 +16,8 @@ export {
   ComponentPage,
   TypographyPage,
   MediaPage,
+  FormPage,
+  TablePage,
+  ButtonPage,
   ShadowPage,
 };

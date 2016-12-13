@@ -20,12 +20,12 @@ const styles = {
   }
 };
 
-const FormPage = (props) => (
+const TablePage = (props) => (
   <div style={styles.container}>
-    <Header title={"Form"} content={"Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."} />
+    <Header title={"Table"} content={"Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."} />
 
 
   </div>
 );
 
-export default radium(FormPage);
+export default radium(TablePage);
