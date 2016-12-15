@@ -1,7 +1,9 @@
 import React, { Component, PropTypes as T } from 'react';
 import { Provider, connect } from 'react-redux';
-import routes from '../routes';
+import routesProvider from '../routes';
 import { Router } from 'react-router';
+import * as Pages from '../components/pages/';
+import * as Layouts from '../components/layouts/';
 
 // i18n
 import { I18nextProvider } from 'react-i18next';
@@ -23,12 +25,13 @@ class Root extends Component {
 
   render() {
     const { store, history } = this.props;
+
     return (
       <Provider store={store}>
         <I18nextProvider i18n={i18n}>
           <div
             style={{ display: 'flex', justifyContent: 'center' }}>
-            <Router history={history} routes={routes} />
+            <Router history={history} routes={routesProvider({ acl: "ACL TEST"})} />
           </div>
         </I18nextProvider>
       </Provider>
