@@ -1,7 +1,7 @@
 import React, { Component, PropTypes as T } from 'react';
 import { connect } from 'react-redux';
 import radium from 'radium';
-import navTreeList from './NavTreeList';
+import { Routes } from '../../routes';
 import NavItem from './navItem';
 import R from 'ramda';
 import { colors, lightBlue400, fullWhite } from '../../styles/colors';
@@ -94,7 +94,7 @@ class NavBar extends Component {
     const {
       activeLinkList,
     } = this.state;
-
+    const navTreeList = Routes.filter(item => item.navItem);
     return (
       <div style={styles.navWrapper}>
         <div style={styles.navBarHeader}>

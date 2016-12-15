@@ -3,7 +3,7 @@ import { Route, IndexRoute, Redirect } from 'react-router';
 import * as Pages from './components/pages/';
 import * as Layouts from './components/layouts/';
 
-const Routes = [
+export const Routes = [
   { title: 'Test', link: 'land', navItem: false, childrenNodes: null, layout: Layouts.Main, page: Pages.AboutPage },
   { title: 'About', link: 'about', navItem: true, childrenNodes: null, layout: Layouts.Main, page: Pages.AboutPage },
   { title: 'Components', link: 'components', navItem: true, layout: Layouts.NavBackground, page: Pages.ComponentPage, childrenNodes: [
