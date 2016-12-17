@@ -1,6 +1,6 @@
 import React from 'react';
 import radium from 'radium';
-import { fullWhite, lightBlue400, grey500 } from '../../../styles/colors';
+import { fullWhite, brown500, grey500 } from '../../../styles/colors';
 const styles = {
   wrapper: {
     display: 'flex',
@@ -9,7 +9,7 @@ const styles = {
     boxSizing: 'border-box',
     padding: '15px',
     backgroundColor: fullWhite,
-    borderTop: `${lightBlue400} 3px solid`,
+    borderTop: `${brown500} 3px solid`,
     boxShadow: `${grey500} 2px 3px 5px`,
     margin: '10px',
   }

@@ -94,6 +94,21 @@ export const btnGhost = {
   }
 };
 
+
+export const pagenationBtn = (btn, type) => ({
+  ...ghostMixin(btn),
+  cursor: 'pointer',
+  textAlign: 'center',
+  width: '38px',
+  height: '38px',
+  margin: '2px',
+  borderRadius: '50%',
+  borderWidth: '2px',
+  borderColor: btn.backgroundColor,
+  color: (type === 'active') ? colorsSet.fullWhite : btn.backgroundColor,
+  backgroundColor: (type === 'active') ? btn.backgroundColor : colorsSet.transparent,
+});
+
 export const ghostMixin = btnOrigin => ({
   ...btnOrigin,
   color: colorsSet.grey800,
@@ -104,6 +119,14 @@ export const ghostMixin = btnOrigin => ({
   ':hover': {
     ...btnOrigin[':hover'],
     borderColor: btnOrigin.backgroundColor,
-    color: '#FFF'
+    color: colorsSet.fullWhite,
+    transition: 'all 300ms cubic-bezier(0.34, 1.61, 0.7, 1)',
   }
-});
+})
+
+
+export const bgAndHoverColor = (color1,color2) => {
+  return (
+    {backgroundColor: color1, ':hover': {backgroundColor: color2}}
+  )
+}

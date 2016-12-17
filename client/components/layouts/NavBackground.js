@@ -2,7 +2,7 @@ import React, { PropTypes as T } from 'react';
 import radium from 'radium';
 import { StyleRoot } from 'radium';
 import NavBar from '../../containers/NavBar/';
-import { fullWhite, blueGrey50 } from '../../styles/colors';
+import { fullWhite, blueGrey50, blueGrey200 } from '../../styles/colors';
 const styles = {
   leftContainer: {
     backgroundColor: fullWhite,
@@ -18,7 +18,7 @@ const styles = {
     top: 0,
     left: 0,
     right: 0,
-    paddingLeft: '240px',
+    paddingLeft: '260px',
     '@media all and (max-width: 750px)': {
       paddingLeft: '0px',
       left: '0vw',

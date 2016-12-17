@@ -4,26 +4,26 @@ import radium from 'radium';
 import { Routes } from '../../routes';
 import NavItem from './navItem';
 import R from 'ramda';
-import { colors, lightBlue400, fullWhite } from '../../styles/colors';
-import * as shoadows from '../../styles/shadow';
+import { blueGrey200, blueGrey50, fullWhite, brown300, lighten } from '../../styles/colors';
 import * as buttons from '../../styles/button';
-import { logo } from '../../assets/images/';
+import * as shadows from '../../styles/shadow';
+
 
 const styles = {
   navWrapper: {
-    ...shoadows.shadowC,
     zIndex: 100,
     height: '100vh',
     position: 'fixed',
-    overflow: 'auto',
-    width: '240px',
-    backgroundColor: fullWhite,
+    overflowY: 'auto',
+    overflowX: 'hidden',
+    width: '260px',
+    backgroundColor: brown300,
     top: 0,
     left: 0,
     '@media all and (max-width: 750px)': {
       display: 'fixed',
       position: 'fixed',
-      backgroundColor: fullWhite,
+      backgroundColor: brown300,
       height: 'auto',
       width: '100vw',
       top: 0,
@@ -53,12 +53,24 @@ const styles = {
     }
   },
   navBarHeader: {
-    padding: '10px',
+    padding: '18px',
     display: 'flex',
     height: '60px',
     alignItems: 'center',
-    backgroundColor: lightBlue400,
-    ...shoadows.shadowB,
+    justifyContent: 'center',
+  },
+  navTitle: {
+    position: 'relative',
+    padding: '0 10px 0 10px',
+    color: blueGrey50,
+    fontWeight: 300,
+    letterSpacing: '3px',
+    fontSize: '18px',
+  },
+  divideLine: {
+    height: '1px',
+    backgroundColor: lighten(brown300, 1),
+    margin: '5px 20px',
   }
 };
 
@@ -79,9 +91,7 @@ class NavBar extends Component {
     // if (nextProps.member.memberStatus === 'INACTIVE' && activeLinkList[0] !== 'personal') {
     //   this.props.toPersonalPageAction();
     // }
-    this.setState({
-      activeLinkList,
-    });
+    this.setState({ activeLinkList });
   }
 
   toggle = () => {
@@ -91,26 +101,24 @@ class NavBar extends Component {
   }
 
   render() {
-    const {
-      activeLinkList,
-    } = this.state;
+    const { activeLinkList } = this.state;
     const navTreeList = Routes.filter(item => item.navItem);
     return (
       <div style={styles.navWrapper}>
         <div style={styles.navBarHeader}>
-          <img style={{ position: 'relative', width: '40px' }} src={logo} alt=""/>
-          <h3 style={{ position: 'relative', padding: '0 10px 0 10px', color: colors.white }}>Web Template</h3>
+          <h3 style={styles.navTitle}>Web Template</h3>
           <button style={styles.displayBtn} onClick={ this.toggle }>
             <i className="fa fa-fw fa-bars fa-lg"></i>
           </button>
         </div>
+        <div style={styles.divideLine} />
         <div style={styles.aboveBar}>
           {
             (this.state.display) ? navTreeList.map((item, idx) =>
               (
                 (activeLinkList[0] === item.link) ?
-                  <NavItem isDisplay key={`nav-item-${idx}`} item={item} disabled={(idx === 20)} />
-                : <NavItem isDisplay={false} key={`nav-item-${idx}`} item={item} disabled={(idx === 20)} />
+                  <NavItem isDisplay key={`nav-item-${idx}`} item={item} disabled={false} />
+                : <NavItem isDisplay={false} key={`nav-item-${idx}`} item={item} disabled={false} />
               )
             ) : <div></div>
           }
