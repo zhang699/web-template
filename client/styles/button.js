@@ -53,14 +53,14 @@ export const disabled = {
   cursor: 'default'
 };
 export const btnDefault = {
-  backgroundColor: colorsSet.grey800,
-  ':hover': {backgroundColor: colorsSet.grey900}
+  backgroundColor: colorsSet.grey700,
+  ':hover': { backgroundColor: colorsSet.grey800 }
 };
 export const btnPrimary = {
   backgroundColor: colorsSet.blueGrey400,
   ':hover': {backgroundColor: colorsSet.blueGrey500}
-
 }
+
 export const btnInfo = {
   backgroundColor: colorsSet.cyan500,
   ':hover': {backgroundColor: colorsSet.cyan600}

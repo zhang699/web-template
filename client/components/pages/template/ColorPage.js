@@ -70,7 +70,7 @@ const DisplayWrapper = (props) => {
         minWidth: '220px',
       }}>
       {
-        ['transparent', 'fullWhite', 'darkWhite', 'lightWhite', 'faintBlack', 'minBlack', 'lightBlack', 'darkBlack', 'fullBlack'].map(
+        ['transparent', 'fullWhite', 'darkWhite', 'lightWhite', 'minWhite', 'faintWhite', 'faintBlack', 'minBlack', 'lightBlack', 'darkBlack', 'fullBlack'].map(
           item => <Display key={`${item}`} color={`${item}`} />
         )
       }

@@ -14,11 +14,13 @@ export default () => next => async action => {
   }
 
   const {
+    url,
     entrypoint,
     types,
     auth,
     json,
     body,
+    indicatorTypes,
     formData,
     method,
     onSuccess,
@@ -37,7 +39,7 @@ export default () => next => async action => {
   }
 
   const [successType, errorType, requestType] = types;
-
+  const [indicatorSuccessType, indicatorFailedType, indicatorFetching] = indicatorTypes;
 
   // Fetch Endpoint
   const fetchOptions = {
@@ -86,89 +88,59 @@ export default () => next => async action => {
 
   try {
     // Before Request
-    if (requestType) {
-      next({
-        type: requestType,
-        waiting: true,
-        entrypoint,
-        fetchOptions,
-      });
+    if (requestType) { next({ type: requestType, waiting: true, entrypoint, fetchOptions }); }
+    if (indicatorFetching) { next({ type: indicatorFetching }); }
+
+    if (fetchOptions.method === 'GET') {
+      delete fetchOptions.body;
     }
 
-    response = await fetch(`${API_HOST}${entrypoint}`, fetchOptions);
-    if (response.ok) {
-      if (response.status !== 204) {
-        response = camelizeKeys(await response.json());
-      }
+    if (url) {
+      response = await fetch(url, fetchOptions);
     } else {
+      response = await fetch(`${API_HOST}${entrypoint}`, fetchOptions);
+    }
+
+    if (response.ok) {
+      // response success but no content
+      if (indicatorSuccessType) { next({ type: indicatorSuccessType }); }
+      if (response.status !== 204) { response = camelizeKeys(await response.json()); }
+    } else {
+      // response error
+      if (indicatorFailedType) { next({ type: indicatorFailedType }); }
       response = camelizeKeys(await response.json());
-
-      next({
-        type: errorType,
-        error: response.message,
-        payload: response,
-      });
-
+      next({ type: errorType, error: response.message, payload: response });
       if (onFailed) onFailed(response.message);
 
       return true;
     }
   } catch (error) {
+    // other error
+    if (indicatorFailedType) { next({ type: indicatorFailedType }); }
+    if (onFailed) onFailed(error);
     if (errorType) {
-      next({
-        type: errorType,
-        error,
-      });
-
+      next({ type: errorType, error });
       if (onFailed) onFailed(error);
       return true;
     }
 
-    if (onFailed) onFailed(error);
 
     return console.error(error);
   }
 
+  // response success with content array
   if (isArray(response)) {
-    next({
-      type: successType,
-      list: response,
-      ...dispatchPayload,
-    });
-
-    if (onSuccess) {
-      onSuccess(response);
-    }
-
+    if (indicatorSuccessType) { next({ type: indicatorSuccessType }); }
+    next({ type: successType, list: response, ...dispatchPayload });
+    if (onSuccess) { onSuccess(response); }
     return true;
   }
 
-  if (response.resultCode !== '0000') {
-    if (errorType) {
-      next({
-        type: errorType,
-        error: response.message,
-        payload: response,
-      });
-    }
-    if (response.resultCode === '1002') {
-      // token expired
-      localStorage.clear();
-      location.reload();
-    }
-
-    if (onFailed) onFailed(response);
-    return console.error(response);
-  }
-
-  if (onSuccess) {
-    onSuccess(response);
-  }
-
-  next({
-    type: successType,
-    ...dispatchPayload,
-    payload: response,
-  });
+  /**
+   * SUCCESS response specific processing
+   */
+  if (indicatorSuccessType) { next({ type: indicatorSuccessType }); }
+  if (onSuccess) { onSuccess(response); }
+  next({ type: successType, ...dispatchPayload, payload: response });
   return true;
 };

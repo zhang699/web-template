@@ -41,11 +41,11 @@ export default (routes => acl => {
   return routes.map( route => {
     if(route.childrenNodes) {
       return (
-        <Route path="/" component={route.layout}>
+        <Route key={`${route.link}-first-level`} path="/" component={route.layout}>
           <Route path={`${route.link}`} component={route.page} />
           {
             route.childrenNodes.map( childRoute => (
-              <Route path={`${route.link}/${childRoute.link}`} component={childRoute.page} />
+              <Route key={`${route.link}-${childRoute.link}`} path={`${route.link}/${childRoute.link}`} component={childRoute.page} />
             ))
           }
           <IndexRoute component={route.page} />
