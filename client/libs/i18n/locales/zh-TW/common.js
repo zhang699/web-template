@@ -12,5 +12,8 @@ export default {
     required: '必填欄位',
     select: '請選取',
     noData: '無資料',
+    
+    thisMyGithub:'這是我的Github Repo',
+    currentLang:'現在語言是'
   },
 };

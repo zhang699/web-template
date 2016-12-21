@@ -33,7 +33,9 @@ export const Routes = [
     { title: 'i18n', link: 'i18n', childrenNodes: null, page: Pages.ElementsPage },
     { title: 'API Indicator', link: 'api-indicator', childrenNodes: null, page: Pages.ElementsPage }],
   },
-  { title: 'Showcase', link: 'showcase', navItem: true, layout: Layouts.NavBackground, page: Pages.ElementsPage, childrenNodes: null }
+  { title: 'Showcase', link: 'showcase', navItem: true, layout: Layouts.NavBackground, page: Pages.ElementsPage, childrenNodes: [
+      {title:'Github API & i18n', link: 'githubapi', childrenNodes:null, page:Pages.GithubAPIi18nPage}]
+  }
 ];
 
 export default (routes => acl => {

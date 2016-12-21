@@ -12,5 +12,8 @@ export default {
     emailVerifying: 'Verifying',
     required: 'Required field',
     select: 'Please select',
+
+    thisMyGithub:'This my Github Repo',
+    currentLang:'Current Language is '
   },
 };

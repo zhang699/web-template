@@ -7,11 +7,11 @@ const INITIAL_STATE = {
 
 export default createReducer(INITIAL_STATE, {
   [Types.FETCH_GITHUB_SUCCESS]: (state = INITIAL_STATE, action) => {
-    const { data } = action;
+    const { list } = action;
     return {
       ...state,
       waiting: false,
-      data,
+      list,
     };
   },
   [Types.FETCH_GITHUB_FAILED]: (state = INITIAL_STATE, action) => {

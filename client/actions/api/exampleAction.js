@@ -32,6 +32,7 @@ export function fetchGithub(payload) {
       method: 'GET',
       onSuccess: (data) => {
         // Things todo when success
+
       },
       onFailed: (data) => {
         // Things todo when success
