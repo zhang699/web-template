@@ -1,5 +1,6 @@
 import React from 'react';
 import radium from 'radium';
+import { translate } from 'react-i18next';
 import * as colorsSet from '../../../styles/colors';
 import Card from '../../utils/Cards/';
 import Header from '../../utils/Header/';
@@ -35,7 +36,7 @@ const styles = {
 
 const ShadowPage = (props) => (
   <div style={styles.container}>
-    <Header title={"Media"} content={"Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."} />
+    <Header title={props.t("media")} content={"Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."} />
     <div style={styles.block}>
       <Card style={{
           flexDirection: 'row',
@@ -80,4 +81,4 @@ const ShadowPage = (props) => (
   </div>
 );
 
-export default radium(ShadowPage);
+export default translate()(radium(ShadowPage));

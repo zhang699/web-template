@@ -12,8 +12,16 @@ export default {
     required: '必填欄位',
     select: '請選取',
     noData: '無資料',
-    
+
     thisMyGithub:'這是我的Github Repo',
-    currentLang:'現在語言是'
+    currentLang:'現在語言是',
+    component:'元件',
+    colorPage:'顏色頁面',
+    media:'多媒體',
+    shadow:'陰影',
+    typography:'字型',
+    table:'表格',
+    form:'表單',
+    button:'按鈕'
   },
 };

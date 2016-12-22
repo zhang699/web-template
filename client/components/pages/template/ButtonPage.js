@@ -1,5 +1,6 @@
 import React from 'react';
 import radium from 'radium';
+import { translate } from 'react-i18next';
 import * as colorsSet from '../../../styles/colors';
 import {
   btn, largeBtn, flatBtn, disabled, btnDefault, btnPrimary, btnInfo,
@@ -32,7 +33,7 @@ const bgAndHoverColor = (color1,color2) => {
 
 const ButtonPage = (props) => (
   <div style={styles.container}>
-    <Header title={"Button"} content={"Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."} />
+    <Header title={props.t("button")} content={"Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."} />
     <div className="row">
       <div className="col-md-4">
         <button key='btn1' className="btn" style={{ ...btn, ...btnDefault}}>Default</button>
@@ -55,4 +56,4 @@ const ButtonPage = (props) => (
   </div>
 );
 
-export default radium(ButtonPage);
+export default translate()(radium(ButtonPage));

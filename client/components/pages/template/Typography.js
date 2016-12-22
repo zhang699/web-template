@@ -1,5 +1,6 @@
 import React from 'react';
 import radium from 'radium';
+import { translate } from 'react-i18next';
 import { colors, darken, lighten } from '../../../styles/colors';
 import * as button from '../../../styles/button';
 import * as input from '../../../styles/input';
@@ -31,7 +32,7 @@ const styles = {
 
 const TypographyPage = (props) => (
   <div style={styles.container}>
-    <Header title={"Typography"} content={"Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."} />
+    <Header title={props.t("typography")} content={"Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."} />
     <div style={{ ...styles.block, flexDirection: 'row', flexWrap: 'wrap' }}>
       <Card style={{flex: 1, alignItems: 'center' }}>
         <h1 style={fonts.h1}>Heading h1</h1>
@@ -74,4 +75,4 @@ const TypographyPage = (props) => (
 );
 
 
-export default radium(TypographyPage);
+export default translate()(radium(TypographyPage));

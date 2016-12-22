@@ -1,5 +1,6 @@
 import React from 'react';
 import radium from 'radium';
+import { translate } from 'react-i18next';
 import * as colorsSet from '../../../styles/colors';
 import Card from '../../utils/Cards/';
 import Header from '../../utils/Header/';
@@ -79,7 +80,7 @@ const DisplayWrapper = (props) => {
 };
 const ColorPage = (props) => (
   <div style={styles.container}>
-    <Header title={"Color Page"} content={"Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."} />
+    <Header title={props.t('colorPage')} content={"Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."} />
     <div style={{ ...styles.block, flexDirection: 'row', flexWrap: 'wrap'}}>
       {
         [
@@ -112,4 +113,4 @@ const ColorPage = (props) => (
   </div>
 );
 
-export default radium(ColorPage);
+export default translate()(radium(ColorPage));

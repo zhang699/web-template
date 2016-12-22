@@ -1,5 +1,6 @@
 import React from 'react';
 import radium from 'radium';
+import { translate } from 'react-i18next';
 import * as colorsSet from '../../../styles/colors';
 import Card from '../../utils/Cards/';
 import Header from '../../utils/Header/';
@@ -30,7 +31,7 @@ const styles = {
 
 const FormPage = (props) => (
   <div style={styles.container}>
-    <Header title={"Form"} content={"Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."} />
+    <Header title={props.t('form')} content={"Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."} />
     <div className="row">
       <span className="col-md-12" style={{fontSize: '4rem',margin: '5px'}}>text field</span>
       <div className="col-md-12">
@@ -66,4 +67,4 @@ const FormPage = (props) => (
   </div>
 );
 
-export default radium(FormPage);
+export default translate()(radium(FormPage));

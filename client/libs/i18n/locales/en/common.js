@@ -14,6 +14,15 @@ export default {
     select: 'Please select',
 
     thisMyGithub:'This my Github Repo',
-    currentLang:'Current Language is '
+    currentLang:'Current Language is ',
+
+    component:'Component',
+    colorPage:'Color Page',
+    media:'Media',
+    shadow:'Shadow',
+    typography:'Typography',
+    table:'Table',
+    form:'Form',
+    button:'Button'
   },
 };

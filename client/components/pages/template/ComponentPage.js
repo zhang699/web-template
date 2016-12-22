@@ -1,5 +1,6 @@
 import React from 'react';
 import radium from 'radium';
+import { translate } from 'react-i18next';
 import { colors, darken, lighten } from '../../../styles/colors';
 import * as fonts from '../../../styles/fonts';
 import Card from '../../utils/Cards/';
@@ -19,7 +20,7 @@ const styles = {
 
 const ComponentPage = (props) => (
   <div style={styles.container}>
-    <Header title={"Component"} content={"Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."} />
+    <Header title={props.t("component")} content={"Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum."} />
     <Card style={{ margin: '10px 0', boxSizing: 'border-box'}}>
       <h5 style={fonts.h5}>Header</h5>
       <p style={fonts.p}> Usaege props : title (string), content (string), style (obj)</p>
@@ -79,4 +80,4 @@ const ComponentPage = (props) => (
 );
 
 
-export default radium(ComponentPage);
+export default translate()(radium(ComponentPage));
