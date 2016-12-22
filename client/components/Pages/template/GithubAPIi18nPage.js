@@ -81,7 +81,7 @@ class GithubAPIi18nPage extends Component {
         </Header>
 
           <div style={styles.contentContainer}>
-            {list.map((item)=>{
+            {list && list.map((item)=>{
               const watcherTitle = item.watchersCount;
               const forkTitle = item.forks;
               return (
