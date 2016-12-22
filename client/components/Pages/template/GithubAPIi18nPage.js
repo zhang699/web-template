@@ -18,7 +18,9 @@ const styles = {
   titleRow:{
     display:'flex',
     flexDirection:'row',
-    fontSize:'18px'
+    fontSize:'18px',
+    alignItems:'flex-end',
+
   },
   repositoryContainer:{
     border:'2px solid #ABC',
@@ -28,14 +30,17 @@ const styles = {
   metaInfo:{
     fontSize:'12px',
     display:'flex',
-    flexDirection:'row'
+    flexDirection:'row',
+    marginBottom:'10px',
+    flexWrap:'wrap'
   },
   metaInfoItem:{
     border:'2px solid #CBA',
     fontColor:'white',
     backgroundColor:'#CBA',
-    margin:'0px 0px',
-    height:'20px'
+    margin:'0px 5px',
+    maxHeight:'40px',
+    borderRadius:'7px'
   },
   updatedDate:{
     backgroundColor:'#CAC',
@@ -43,13 +48,16 @@ const styles = {
   },
   contentContainer:{
     padding:'5px',
-    margin:'5px 0px'
+    margin:'5px 5px'
   }
 }
 class GithubAPIi18nPage extends Component {
 
   componentWillMount(){
     this.props.fetchGithub({userName:'zhang699'});
+    if (!this.props.language) {
+      this.props.changeLanguage('en');
+    }
   }
 
   onLangButtonClick(){
@@ -57,23 +65,33 @@ class GithubAPIi18nPage extends Component {
   }
   render(){
     const {t, language, list} = this.props;
+
     return (
       <div style={styles.container}>
         <Header>
-          <h2>{t('thisMyGithub')}</h2>
-          <Button style={styles.switchLangButton} name={t('currentLang') + language} onClick={this.onLangButtonClick.bind(this)}>
+          <h2 className="col-md-6">{t('thisMyGithub')}</h2>
 
-          </Button>
+            <Button
+              style={styles.switchLangButton}
+              name={t('currentLang') + language}
+              onClick={this.onLangButtonClick.bind(this)}>
+
+            </Button>
+
         </Header>
 
           <div style={styles.contentContainer}>
             {list.map((item)=>{
+              const watcherTitle = item.watchersCount;
+              const forkTitle = item.forks;
               return (
-                <div style={styles.repositoryContainer}>
+                <div className="col-md-6" style={styles.repositoryContainer}>
                   <div style={styles.titleRow}>
                     <h2>{item.name}</h2>
                     <div style={styles.metaInfo}>
                       <h4 style={styles.metaInfoItem}>{item.language}</h4>
+                      <h4 style={styles.metaInfoItem}>{watcherTitle}</h4>
+                      <h4 style={styles.metaInfoItem}>{forkTitle}</h4>
                       <h4 style={[styles.metaInfoItem, styles.updatedDate]}>{item.updatedAt}</h4>
                     </div>
                   </div>
@@ -89,7 +107,7 @@ class GithubAPIi18nPage extends Component {
 
 
 const mapStateToProps = (state, ownProps)=>{
-  const {language='en'} = state.i18n;
+  const {language} = state.i18n;
   const {list} = state.exampleReducer;
   return {
     language,
