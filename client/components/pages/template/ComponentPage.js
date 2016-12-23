@@ -8,6 +8,7 @@ import Header from '../../utils/Header/';
 import Footer from '../../utils/Footer/';
 import DisplayBox from '../../utils/DisplayBox/';
 import DatePicker from '../../utils/DatePicker/';
+import DatePickerDemoPage from './DatePickerDemoPage';
 import RadioBtn from '../../../components/utils/radioButton';
 
 const styles = {
@@ -53,7 +54,10 @@ const ComponentPage = (props) => (
       <h5 style={fonts.h5}>DatePicker</h5>
       TODO
       <p style={fonts.p}> Usaege props : style (obj)</p>
-      <DatePicker />
+      {/*<DatePicker />*/}
+      <div >
+        <DatePickerDemoPage/>
+      </div>
     </Card>
 
     <Card style={{ margin: '10px 0', boxSizing: 'border-box'}}>
